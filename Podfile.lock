@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (1.1.4)
-  - RequestKit (0.1.0):
+  - RequestKit (0.1.1):
     - Alamofire
 
 DEPENDENCIES:
@@ -8,6 +8,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 524225da382071ee3e6d0badd0ee4b4dc36740de
-  RequestKit: 7d2d25182f3dd88ee3f270eb558851e4e006f09a
+  RequestKit: adfaeea07ec3fe48d859c436537d50c7c9c08acb
 
 COCOAPODS: 0.36.0.beta.2

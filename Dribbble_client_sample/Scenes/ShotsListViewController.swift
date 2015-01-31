@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import RequestKit
 
 class ShotsListViewController: ViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configure()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.fetchShots()
     }
    
     private func configure() {
@@ -20,6 +27,14 @@ class ShotsListViewController: ViewController, UICollectionViewDelegateFlowLayou
         self.collectionView.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    }
+    
+    private func fetchShots() {
+        ShotsRequest.fetchShotsList(handelers: Request.Handlers(success: { (urlResponse, responseObject) -> Void in
+            println("success!!!!!!\(responseObject)")
+        }, failure: { (urlResponse, error) -> Void in
+            println("failed!!!!!!!\(error)")
+        }))
     }
     
     /* Delegate, Datasource */
