@@ -8,29 +8,29 @@
 
 import RequestKit
 
+enum List: String {
+    case Animated = "animated"
+    case Attachments = "attachments"
+    case Debuts = "debuts"
+    case Playoffs = "playoffs"
+    case Rebounds = "rebounds"
+    case Teams = "teams"
+}
+
+enum TimeFrame: String {
+    case Week = "week"
+    case Month = "month"
+    case Year = "year"
+    case Ever = "ever"
+}
+
+enum Sort: String {
+    case Comments = "comments"
+    case Recent = "recent"
+    case Views = "views"
+}
+
 class ShotsRequest: appRequest {
-    enum List: String {
-        case Animated = "animated"
-        case Attachments = "attachments"
-        case Debuts = "debuts"
-        case Playoffs = "playoffs"
-        case Rebounds = "rebounds"
-        case Teams = "teams"
-    }
-    
-    enum TimeFrame: String {
-        case Week = "week"
-        case Month = "month"
-        case Year = "year"
-        case Ever = "ever"
-    }
-    
-    enum Sort: String {
-        case Comments = "comments"
-        case Recent = "recent"
-        case Views = "views"
-    }
-    
     private struct Keys {
         static let List = "list"
         static let TimeFrame = "timeframe"

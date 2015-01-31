@@ -1,3 +1,4 @@
-platform :ios, '8.0'
+platform :ios, "8.0"
 
-pod 'RequestKit’
+pod "RequestKit"
+pod "SwiftyJSON"
