@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShotsListCell" id="MKa-MD-PlS" customClass="ShotsListCell" customModule="Dribbble_client_sample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k5D-Xf-PF4">
+                        <rect key="frame" x="5" y="5" width="90" height="90"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="k5D-Xf-PF4" firstAttribute="top" secondItem="MKa-MD-PlS" secondAttribute="top" constant="5" id="58n-PD-4xC"/>
+                <constraint firstItem="k5D-Xf-PF4" firstAttribute="leading" secondItem="MKa-MD-PlS" secondAttribute="leading" constant="5" id="UQ9-hr-L2v"/>
+                <constraint firstAttribute="bottom" secondItem="k5D-Xf-PF4" secondAttribute="bottom" constant="5" id="lNl-8q-5v8"/>
+                <constraint firstAttribute="trailing" secondItem="k5D-Xf-PF4" secondAttribute="trailing" constant="5" id="wu8-ag-weN"/>
+            </constraints>
+            <size key="customSize" width="50" height="126"/>
+            <connections>
+                <outlet property="imageView" destination="k5D-Xf-PF4" id="LKI-MC-AeE"/>
+            </connections>
+            <point key="canvasLocation" x="121" y="384"/>
+        </collectionViewCell>
+    </objects>
+</document>

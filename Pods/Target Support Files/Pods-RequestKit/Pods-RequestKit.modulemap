@@ -1,0 +1,6 @@
+framework module RequestKit {
+  umbrella header "Pods-RequestKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
