@@ -10,7 +10,10 @@ import UIKit
 import RequestKit
 
 class ShotsListViewController: ViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var shots: [Shot] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +33,26 @@ class ShotsListViewController: ViewController, UICollectionViewDelegateFlowLayou
     }
     
     private func fetchShots() {
-        ShotsRequest.fetchShotsList(handelers: Request.Handlers(success: { (urlResponse, responseObject) -> Void in
-            println("success!!!!!!\(responseObject)")
-        }, failure: { (urlResponse, error) -> Void in
-            println("failed!!!!!!!\(error)")
-        }))
+        ShotsModel.sharedModel.fetchLatestShots(
+            page: 1,
+            success: {[weak self] (shots: [Shot]) -> Void in
+                self?.shots += shots
+                self?.reloadWithAnimation(true)
+            }, { (error) -> Void in
+                
+        })
+    }
+    
+    private func reloadWithAnimation(animation: Bool) {
+        if animation {
+            let transition = CATransition()
+            transition.type = kCATransitionPush
+            transition.subtype = kCATransitionFromTop
+            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            transition.duration = 0.5
+            self.collectionView.layer.addAnimation(transition, forKey: "pushReload")
+        }
+        self.collectionView.reloadData()
     }
     
     /* Delegate, Datasource */
@@ -44,7 +62,7 @@ class ShotsListViewController: ViewController, UICollectionViewDelegateFlowLayou
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.shots.count
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {

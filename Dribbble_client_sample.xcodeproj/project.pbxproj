@@ -11,6 +11,8 @@
 		2A72EECF1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A72EECD1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld */; };
 		2A72EED61A7CE20000B3CFD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A72EED51A7CE20000B3CFD7 /* Images.xcassets */; };
 		2A72EEE51A7CE20000B3CFD7 /* Dribbble_client_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A72EEE41A7CE20000B3CFD7 /* Dribbble_client_sampleTests.swift */; };
+		2AC71DA71A7DACB2001C8447 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC71D9F1A7DACB2001C8447 /* json.swift */; };
+		2AC71DA91A7DACB2001C8447 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2AC71DA41A7DACB2001C8447 /* LICENSE */; };
 		2AD1D4591A7D144C00BFB203 /* ShotsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D4581A7D144C00BFB203 /* ShotsRequest.swift */; };
 		2AD1D45C1A7D146000BFB203 /* ShotsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D45B1A7D146000BFB203 /* ShotsListCell.swift */; };
 		2AD1D45F1A7D146700BFB203 /* ShotsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD1D45E1A7D146700BFB203 /* ShotsListCell.xib */; };
@@ -33,6 +35,13 @@
 			remoteGlobalIDString = 2A72EEC51A7CE1FF00B3CFD7;
 			remoteInfo = Dribbble_client_sample;
 		};
+		2AC71DAC1A7DACB2001C8447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AC71DA11A7DACB2001C8447 /* json.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9E66B57219F5E3F30016A7C1;
+			remoteInfo = json;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +55,10 @@
 		2A72EEDE1A7CE20000B3CFD7 /* Dribbble_client_sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dribbble_client_sampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A72EEE31A7CE20000B3CFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A72EEE41A7CE20000B3CFD7 /* Dribbble_client_sampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dribbble_client_sampleTests.swift; sourceTree = "<group>"; };
+		2AC71D9F1A7DACB2001C8447 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		2AC71DA11A7DACB2001C8447 /* json.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = json.xcodeproj; sourceTree = "<group>"; };
+		2AC71DA41A7DACB2001C8447 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2AC71DA51A7DACB2001C8447 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2AD1D4581A7D144C00BFB203 /* ShotsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsRequest.swift; sourceTree = "<group>"; };
 		2AD1D45B1A7D146000BFB203 /* ShotsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsListCell.swift; sourceTree = "<group>"; };
 		2AD1D45E1A7D146700BFB203 /* ShotsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotsListCell.xib; sourceTree = "<group>"; };
@@ -87,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2A72EEC81A7CE1FF00B3CFD7 /* Dribbble_client_sample */,
+				2AC71D9C1A7DACB2001C8447 /* SwiftyJSON */,
 				2A72EEE11A7CE20000B3CFD7 /* Dribbble_client_sampleTests */,
 				2A72EEC71A7CE1FF00B3CFD7 /* Products */,
 				D60F7E468BD62C263DFCBC5A /* Pods */,
@@ -145,6 +159,33 @@
 				2A72EEE31A7CE20000B3CFD7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AC71D9C1A7DACB2001C8447 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				2AC71D9E1A7DACB2001C8447 /* json */,
+				2AC71DA11A7DACB2001C8447 /* json.xcodeproj */,
+				2AC71DA41A7DACB2001C8447 /* LICENSE */,
+				2AC71DA51A7DACB2001C8447 /* README.md */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		2AC71D9E1A7DACB2001C8447 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				2AC71D9F1A7DACB2001C8447 /* json.swift */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		2AC71DA21A7DACB2001C8447 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AC71DAD1A7DACB2001C8447 /* json */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		2AD1D4571A7D144C00BFB203 /* Commons */ = {
@@ -289,6 +330,12 @@
 			mainGroup = 2A72EEBD1A7CE1FF00B3CFD7;
 			productRefGroup = 2A72EEC71A7CE1FF00B3CFD7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2AC71DA21A7DACB2001C8447 /* Products */;
+					ProjectRef = 2AC71DA11A7DACB2001C8447 /* json.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2A72EEC51A7CE1FF00B3CFD7 /* Dribbble_client_sample */,
@@ -296,6 +343,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2AC71DAD1A7DACB2001C8447 /* json */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = json;
+			remoteRef = 2AC71DAC1A7DACB2001C8447 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2A72EEC41A7CE1FF00B3CFD7 /* Resources */ = {
@@ -305,6 +362,7 @@
 				2AD1D4741A7D6BE400BFB203 /* Main.storyboard in Resources */,
 				2A72EED61A7CE20000B3CFD7 /* Images.xcassets in Resources */,
 				2AD1D45F1A7D146700BFB203 /* ShotsListCell.xib in Resources */,
+				2AC71DA91A7DACB2001C8447 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +439,7 @@
 				2AD1D4771A7D7FD600BFB203 /* Shot.swift in Sources */,
 				2AD1D4661A7D147600BFB203 /* ShotsListViewController.swift in Sources */,
 				2AD1D45C1A7D146000BFB203 /* ShotsListCell.swift in Sources */,
+				2AC71DA71A7DACB2001C8447 /* json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

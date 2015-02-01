@@ -7,8 +7,9 @@
 //
 
 import RequestKit
+import SwiftyJSON
 
-class ShotsModel {
+class ShotsModel: Model {
     class var sharedModel: ShotsModel {
         struct SharedInstance {
             static let instance = ShotsModel()
@@ -16,18 +17,35 @@ class ShotsModel {
         return SharedInstance.instance
     }
     
-    let PerPage = 20
+    let PerPage = 50
     
-    func fetchLatestShots(list: List,
-        sort: Sort,
-        page: Int,
-        success: ) {
+    func fetchLatestShots(
+        list: List? = nil,
+        sort: Sort? = nil,
+        page: Int? = nil,
+        success: ([Shot] -> Void)? = nil,
+        failure: Failure? = nil) {
             ShotsRequest.fetchShotsList(
                 list: list,
                 timeframe: .Ever,
                 sort: sort,
                 page: page,
                 perPage: PerPage,
-                handelers: handlers)
+                handelers: Request.Handlers(
+                    success: { (urlResponse, responseObject) -> Void in
+                        var shots = [Shot]()
+                        if let json: JSON = Model.serializeToJson(responseObject) {
+                            for shotJson in json {
+                                let shot = Shot(json: shotJson.1)
+                                shots.append(shot)
+                            }
+                        }
+                        success?(shots)
+                        return
+                    },
+                    failure: { (urlResponse, error) -> Void in
+                        failure?(error: error! as NSError)
+                        return
+                }))
     }
 }

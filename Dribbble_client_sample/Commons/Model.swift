@@ -6,7 +6,17 @@
 //  Copyright (c) 2015 Ryo Aoyama. All rights reserved.
 //
 
-import Model {
+import UiKit
+import SwiftyJSON
+
+class Model {
     typealias Success = (() -> Void)
     typealias Failure = ((error: NSError) -> Void)
+    
+    class func serializeToJson(object: AnyObject?) -> JSON? {
+        if let object: AnyObject = object {
+            return JSON(data: object as NSData)
+        }
+        return nil
+    }
 }
