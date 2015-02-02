@@ -7,7 +7,6 @@
 //
 
 import UiKit
-import SwiftyJSON
 
 class Model {
     typealias Success = (() -> Void)

@@ -26,4 +26,24 @@ class ShotsListCell: UICollectionViewCell {
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.mainScreen().scale
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.imageView.image = nil
+        self.imageView.layer.removeAllAnimations()
+    }
+    
+    func applyImage(image: UIImage?, animated: Bool = false) {
+        if animated {
+            let transition = CATransition()
+            transition.type = kCATransitionFade
+            transition.duration = 0.09
+            self.imageView.layer.addAnimation(transition, forKey: "fade")
+        }else {
+            self.imageView.layer.removeAnimationForKey("fade")
+        }
+        if self.imageView.image == nil {
+            self.imageView.image = image
+        }
+    }
 }

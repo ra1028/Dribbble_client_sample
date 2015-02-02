@@ -1,46 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hxF-TD-MhU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Shots List View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Navigation Controller-->
+        <scene sceneID="Hts-B7-v9H">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ShotsListViewController" customModule="Dribbble_client_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="hxF-TD-MhU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L3e-Tp-JxR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DOe-bW-8gb" kind="relationship" relationship="rootViewController" id="Od9-X3-Iox"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glQ-FQ-9Jv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="310"/>
+        </scene>
+        <!--Shots List Parent View Controller-->
+        <scene sceneID="sdp-Co-XVO">
+            <objects>
+                <viewController id="DOe-bW-8gb" customClass="ShotsListParentViewController" customModule="Dribbble_client_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="5xe-BV-Bbu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tk3-dA-jsg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="Wjm-Lr-K7d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k4m-Sw-I0u">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j3w-Li-qJM">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zJ-w8-ra8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G5K-Zm-FrT"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="k4m-Sw-I0u" secondAttribute="trailing" id="iRH-K1-db4"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="k4m-Sw-I0u" secondAttribute="bottom" id="lhv-Mt-g7e"/>
-                            <constraint firstItem="k4m-Sw-I0u" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="tf4-7Y-d9x"/>
-                            <constraint firstItem="k4m-Sw-I0u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xDJ-W5-Rze"/>
+                            <constraint firstItem="7zJ-w8-ra8" firstAttribute="leading" secondItem="Wjm-Lr-K7d" secondAttribute="leading" id="QgA-lZ-RgW"/>
+                            <constraint firstAttribute="trailing" secondItem="7zJ-w8-ra8" secondAttribute="trailing" id="Uxi-GY-TYk"/>
+                            <constraint firstItem="7zJ-w8-ra8" firstAttribute="top" secondItem="5xe-BV-Bbu" secondAttribute="bottom" id="hWm-bm-OkZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AKb-FL-Oi4"/>
                     <connections>
-                        <outlet property="collectionView" destination="k4m-Sw-I0u" id="YpZ-Sb-Mo1"/>
+                        <outlet property="pageTitleScrollView" destination="7zJ-w8-ra8" id="Iaj-l5-att"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEb-32-82K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="134" y="310"/>
         </scene>
     </scenes>
 </document>

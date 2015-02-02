@@ -11,6 +11,13 @@
 		2A72EECF1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A72EECD1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld */; };
 		2A72EED61A7CE20000B3CFD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A72EED51A7CE20000B3CFD7 /* Images.xcassets */; };
 		2A72EEE51A7CE20000B3CFD7 /* Dribbble_client_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A72EEE41A7CE20000B3CFD7 /* Dribbble_client_sampleTests.swift */; };
+		2A8FAC921A7EF2A400113711 /* RecentShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FAC911A7EF2A400113711 /* RecentShotsViewController.swift */; };
+		2A8FAC951A7EFE1A00113711 /* DebutsShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FAC941A7EFE1A00113711 /* DebutsShotsViewController.swift */; };
+		2A8FAC971A7EFEBE00113711 /* PopularShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FAC961A7EFEBE00113711 /* PopularShotsViewController.swift */; };
+		2A8FAC991A7EFF7900113711 /* ShotsListParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FAC981A7EFF7900113711 /* ShotsListParentViewController.swift */; };
+		2A8FDADB1A7DE1AD0085F4D0 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FDADA1A7DE1AD0085F4D0 /* ImageRequest.swift */; };
+		2A8FDAE21A7DFA550085F4D0 /* AdditionalLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FDAE11A7DFA550085F4D0 /* AdditionalLoadViewController.swift */; };
+		2A8FDAE51A7E92E30085F4D0 /* IndicatorReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FDAE41A7E92E30085F4D0 /* IndicatorReusableView.swift */; };
 		2AC71DA71A7DACB2001C8447 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC71D9F1A7DACB2001C8447 /* json.swift */; };
 		2AC71DA91A7DACB2001C8447 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2AC71DA41A7DACB2001C8447 /* LICENSE */; };
 		2AD1D4591A7D144C00BFB203 /* ShotsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D4581A7D144C00BFB203 /* ShotsRequest.swift */; };
@@ -55,6 +62,13 @@
 		2A72EEDE1A7CE20000B3CFD7 /* Dribbble_client_sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dribbble_client_sampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A72EEE31A7CE20000B3CFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A72EEE41A7CE20000B3CFD7 /* Dribbble_client_sampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dribbble_client_sampleTests.swift; sourceTree = "<group>"; };
+		2A8FAC911A7EF2A400113711 /* RecentShotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentShotsViewController.swift; sourceTree = "<group>"; };
+		2A8FAC941A7EFE1A00113711 /* DebutsShotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebutsShotsViewController.swift; sourceTree = "<group>"; };
+		2A8FAC961A7EFEBE00113711 /* PopularShotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularShotsViewController.swift; sourceTree = "<group>"; };
+		2A8FAC981A7EFF7900113711 /* ShotsListParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsListParentViewController.swift; sourceTree = "<group>"; };
+		2A8FDADA1A7DE1AD0085F4D0 /* ImageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		2A8FDAE11A7DFA550085F4D0 /* AdditionalLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalLoadViewController.swift; sourceTree = "<group>"; };
+		2A8FDAE41A7E92E30085F4D0 /* IndicatorReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorReusableView.swift; sourceTree = "<group>"; };
 		2AC71D9F1A7DACB2001C8447 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		2AC71DA11A7DACB2001C8447 /* json.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = json.xcodeproj; sourceTree = "<group>"; };
 		2AC71DA41A7DACB2001C8447 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -122,8 +136,8 @@
 			children = (
 				2A72EECB1A7CE1FF00B3CFD7 /* AppDelegate.swift */,
 				2A72EED21A7CE1FF00B3CFD7 /* Main.storyboard */,
-				2A72EED51A7CE20000B3CFD7 /* Images.xcassets */,
 				2A72EED71A7CE20000B3CFD7 /* LaunchScreen.xib */,
+				2A72EED51A7CE20000B3CFD7 /* Images.xcassets */,
 				2A72EECD1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld */,
 				2AD1D4631A7D147600BFB203 /* Scenes */,
 				2AD1D45A1A7D146000BFB203 /* Views */,
@@ -193,6 +207,7 @@
 			children = (
 				2AD1D4581A7D144C00BFB203 /* ShotsRequest.swift */,
 				2AD1D4701A7D48D300BFB203 /* appRequest.swift */,
+				2A8FDADA1A7DE1AD0085F4D0 /* ImageRequest.swift */,
 				2AD1D4781A7D7FE700BFB203 /* ShotsModel.swift */,
 				2AD1D47C1A7D8BF700BFB203 /* Model.swift */,
 			);
@@ -203,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD1D45B1A7D146000BFB203 /* ShotsListCell.swift */,
+				2A8FDAE41A7E92E30085F4D0 /* IndicatorReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +243,11 @@
 			isa = PBXGroup;
 			children = (
 				2AD1D4641A7D147600BFB203 /* ShotsListViewController.swift */,
+				2A8FAC981A7EFF7900113711 /* ShotsListParentViewController.swift */,
+				2A8FAC911A7EF2A400113711 /* RecentShotsViewController.swift */,
+				2A8FAC941A7EFE1A00113711 /* DebutsShotsViewController.swift */,
+				2A8FAC961A7EFEBE00113711 /* PopularShotsViewController.swift */,
+				2A8FDAE11A7DFA550085F4D0 /* AdditionalLoadViewController.swift */,
 				2AD1D4651A7D147600BFB203 /* ViewController.swift */,
 			);
 			path = Scenes;
@@ -430,15 +451,22 @@
 			files = (
 				2AD1D4621A7D146F00BFB203 /* UIView.Util.swift in Sources */,
 				2A72EECF1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld in Sources */,
+				2A8FAC971A7EFEBE00113711 /* PopularShotsViewController.swift in Sources */,
 				2A72EECC1A7CE1FF00B3CFD7 /* AppDelegate.swift in Sources */,
 				2AD1D47D1A7D8BF700BFB203 /* Model.swift in Sources */,
 				2AD1D4591A7D144C00BFB203 /* ShotsRequest.swift in Sources */,
+				2A8FDAE21A7DFA550085F4D0 /* AdditionalLoadViewController.swift in Sources */,
 				2AD1D4671A7D147600BFB203 /* ViewController.swift in Sources */,
 				2AD1D4791A7D7FE700BFB203 /* ShotsModel.swift in Sources */,
+				2A8FAC991A7EFF7900113711 /* ShotsListParentViewController.swift in Sources */,
 				2AD1D4711A7D48D300BFB203 /* appRequest.swift in Sources */,
+				2A8FDAE51A7E92E30085F4D0 /* IndicatorReusableView.swift in Sources */,
+				2A8FDADB1A7DE1AD0085F4D0 /* ImageRequest.swift in Sources */,
+				2A8FAC921A7EF2A400113711 /* RecentShotsViewController.swift in Sources */,
 				2AD1D4771A7D7FD600BFB203 /* Shot.swift in Sources */,
 				2AD1D4661A7D147600BFB203 /* ShotsListViewController.swift in Sources */,
 				2AD1D45C1A7D146000BFB203 /* ShotsListCell.swift in Sources */,
+				2A8FAC951A7EFE1A00113711 /* DebutsShotsViewController.swift in Sources */,
 				2AC71DA71A7DACB2001C8447 /* json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

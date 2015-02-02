@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Ryo Aoyama. All rights reserved.
 //
 
-import SwiftyJSON
+import UIKit
 
 class Shot: NSObject {
     var id: Int?
@@ -14,6 +14,9 @@ class Shot: NSObject {
     var imageUrl: String?
     var summary: String?
     var title: String?
+
+    var teaserImage: UIImage?
+    var image: UIImage?
     
     init(json: JSON) {
         super.init()

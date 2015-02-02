@@ -22,6 +22,10 @@
 import Alamofire
 
 public class Request {
+    public init() {
+        
+    }
+    
     public enum RequestStatus {
         case Waiting
         case Running
@@ -50,16 +54,16 @@ public class Request {
     
     public typealias Parameters = [String : AnyObject]
     public struct RequestComponent {
-        var method: Method
-        var path: String
+        public var method: Method
+        public var path: String
         public var parameters: Parameters?
-        var taskType: TaskType
+        public var taskType: TaskType
         public init(method: Method, path: String = "") {
             self.method = method
             self.path = path
             self.taskType = .Data
         }
-        func description() -> String {
+        public func description() -> String {
             var log: String = "\n"
             log += "Method: " + method.rawValue + "\n"
             log += "Path: " + path + "\n"
@@ -69,10 +73,10 @@ public class Request {
     }
     
     public struct AutoRetryConfiguration {
-        var timeInterval: NSTimeInterval = 0
-        var maxRetryCount: Int = 5
-        var enableBackgroundRetry: Bool = true
-        init(timeInterval: NSTimeInterval, maxRetryCount: Int = 5, enableBackgroundRetry: Bool = true) {
+        public var timeInterval: NSTimeInterval = 0
+        public var maxRetryCount: Int = 5
+        public var enableBackgroundRetry: Bool = true
+        public init(timeInterval: NSTimeInterval, maxRetryCount: Int = 5, enableBackgroundRetry: Bool = true) {
             self.timeInterval = timeInterval
             self.maxRetryCount = maxRetryCount
             self.enableBackgroundRetry = enableBackgroundRetry
@@ -84,9 +88,9 @@ public class Request {
     public typealias Failure = ((urlResponse: NSHTTPURLResponse?, error: NSError?) -> Void)
     
     public struct Handlers {
-        var progress: Progress?
-        var success: Success?
-        var failure: Failure?
+        public var progress: Progress?
+        public var success: Success?
+        public var failure: Failure?
         public init(progress: Progress? = nil, success: Success? = nil, failure: Failure? = nil) {
             self.progress = progress
             self.success = success
@@ -104,9 +108,6 @@ public class Request {
     
     public var baseURL: NSURL? {
         return nil
-    }
-    
-    public init() {
     }
     
     public func appendDefaultParameters(parameters : [String: AnyObject]?) -> [String: AnyObject]? {
