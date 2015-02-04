@@ -41,9 +41,10 @@ class ShotsListViewController: AdditionalLoadViewController, UICollectionViewDel
         self.collectionView.autoresizingMask = .FlexibleWidth | .FlexibleHeight
         self.collectionView.registerNib(UINib(nibName: ShotsListCell.className(), bundle: nil), forCellWithReuseIdentifier: ShotsListCell.className())
         self.collectionView.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
-        let insetTop: CGFloat = 94
+        let insetTop: CGFloat = 64.0 + 35.0
         self.collectionView.contentInset.top = insetTop
         self.collectionView.scrollIndicatorInsets.top = insetTop
+        self.collectionView.delaysContentTouches = false
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.registerClass(IndicatorReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "IndicatorReusableView")
@@ -61,11 +62,13 @@ class ShotsListViewController: AdditionalLoadViewController, UICollectionViewDel
             sort: component.sort,
             timeFrame: component.timeFrame,
             success: {[weak self] (shots: [Shot]) -> Void in
-                self?.startIndicator.stopAnimating()
                 self?.shots += shots
                 self?.reloadWithPush(true)
+                self?.startIndicator.stopAnimating()
+                self?.startIndicator.removeFromSuperview()
             }) {[weak self] (error) -> Void in
                 self?.startIndicator.stopAnimating()
+                self?.startIndicator.removeFromSuperview()
                 return
         }
     }
@@ -121,6 +124,17 @@ class ShotsListViewController: AdditionalLoadViewController, UICollectionViewDel
     }
     
     /* Delegate, Datasource */
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let controller = ShotsDetailViewController.instantiateFromNib() as ShotsDetailViewController
+        
+        let nav = UINavigationController(rootViewController: controller)
+        nav.modalTransitionStyle = .CrossDissolve
+        self.presentViewController(nav, animated: true, nil)
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.05 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+            controller.shot = self.shots[indexPath.row]
+        })
+    }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1

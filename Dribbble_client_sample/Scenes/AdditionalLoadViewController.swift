@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdditionalLoadViewController: ViewController {
+class AdditionalLoadViewController: UIViewController {
     private var loadingFlag: Bool = false
     weak var loadScrollView: UIScrollView? {
         willSet {

@@ -14,6 +14,7 @@ class Shot: NSObject {
     var imageUrl: String?
     var summary: String?
     var title: String?
+    var player: Player?
 
     var teaserImage: UIImage?
     var image: UIImage?
@@ -29,5 +30,6 @@ class Shot: NSObject {
         if let value = json["images"]["normal"].asString { self.imageUrl = value }
         if let value = json["description"].asString { self.summary = value }
         if let value = json["title"].asString { self.title = value }
+        self.player = Player(json: json["user"])
     }
 }

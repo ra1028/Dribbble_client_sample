@@ -11,6 +11,13 @@ import UIKit
 class ShotsListCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
+    override var highlighted: Bool {
+        didSet {
+            let alpha: CGFloat = highlighted ? 0.5 : 1.0
+            self.imageView.alpha = alpha
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.configure()

@@ -9,22 +9,18 @@
 import UIKit
 
 class ShotsListParentViewController:
-    ViewController,
+    UIViewController,
     UIPageViewControllerDelegate,
     UIPageViewControllerDataSource
 {
-    @IBOutlet weak var pageTitleScrollView: UIView!
+    @IBOutlet weak var pageDisplayView: PageDisplayView!
     private var pageViewController: UIPageViewController!
     private var viewControllers: [UIViewController]! = []
     private var pageIndex: Int = 0
     
-    override init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.configure()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configure()
         self.configurePageViewController()
         self.fillNavigationBar(color: UIColor.whiteColor())
     }
@@ -50,6 +46,8 @@ class ShotsListParentViewController:
             direction: .Forward,
             animated: true,
             completion: nil)
+        
+        self.pageDisplayView.titles = ["Recent", "Debuts", "Popular"]
     }
     
     private func configurePageViewController() {
@@ -57,10 +55,8 @@ class ShotsListParentViewController:
         self.view.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
         
         self.addChildViewController(self.pageViewController)
-        self.view.addSubview(self.pageViewController.view)
+        self.view.insertSubview(self.pageViewController.view, atIndex: 0)
         self.pageViewController.didMoveToParentViewController(self)
-        
-        self.view.bringSubviewToFront(self.pageTitleScrollView)
     }
     
     private func fillNavigationBar(#color: UIColor) {
@@ -98,6 +94,7 @@ class ShotsListParentViewController:
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         let afterIndex = (viewController as ShotsListViewController).controllerIndex
+        self.pageDisplayView.page = afterIndex
         if !self.evalNextIndex(afterIndex) {
             return nil
         }
@@ -106,6 +103,7 @@ class ShotsListParentViewController:
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         let beforeIndex = (viewController as ShotsListViewController).controllerIndex
+        self.pageDisplayView.page = beforeIndex
         if !self.evalPrevIndex(beforeIndex) {
             return nil
         }

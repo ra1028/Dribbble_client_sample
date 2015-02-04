@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0819F41A813CE00073087F /* PageDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0819F31A813CE00073087F /* PageDisplayView.swift */; };
+		2A0819F71A815EA00073087F /* ShotsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0819F61A815EA00073087F /* ShotsDetailViewController.swift */; };
+		2A0819F91A8169470073087F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0819F81A8169470073087F /* Player.swift */; };
+		2A0819FB1A8171500073087F /* UIViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0819FA1A8171500073087F /* UIViewController+Util.swift */; };
 		2A72EECC1A7CE1FF00B3CFD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A72EECB1A7CE1FF00B3CFD7 /* AppDelegate.swift */; };
 		2A72EECF1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A72EECD1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld */; };
 		2A72EED61A7CE20000B3CFD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A72EED51A7CE20000B3CFD7 /* Images.xcassets */; };
@@ -25,7 +29,6 @@
 		2AD1D45F1A7D146700BFB203 /* ShotsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD1D45E1A7D146700BFB203 /* ShotsListCell.xib */; };
 		2AD1D4621A7D146F00BFB203 /* UIView.Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D4611A7D146F00BFB203 /* UIView.Util.swift */; };
 		2AD1D4661A7D147600BFB203 /* ShotsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D4641A7D147600BFB203 /* ShotsListViewController.swift */; };
-		2AD1D4671A7D147600BFB203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D4651A7D147600BFB203 /* ViewController.swift */; };
 		2AD1D4711A7D48D300BFB203 /* appRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D4701A7D48D300BFB203 /* appRequest.swift */; };
 		2AD1D4741A7D6BE400BFB203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A72EED21A7CE1FF00B3CFD7 /* Main.storyboard */; };
 		2AD1D4771A7D7FD600BFB203 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1D4761A7D7FD500BFB203 /* Shot.swift */; };
@@ -52,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0819F31A813CE00073087F /* PageDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageDisplayView.swift; sourceTree = "<group>"; };
+		2A0819F61A815EA00073087F /* ShotsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsDetailViewController.swift; sourceTree = "<group>"; };
+		2A0819F81A8169470073087F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		2A0819FA1A8171500073087F /* UIViewController+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		2A72EEC61A7CE1FF00B3CFD7 /* Dribbble_client_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dribbble_client_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A72EECA1A7CE1FF00B3CFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A72EECB1A7CE1FF00B3CFD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +85,6 @@
 		2AD1D45E1A7D146700BFB203 /* ShotsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotsListCell.xib; sourceTree = "<group>"; };
 		2AD1D4611A7D146F00BFB203 /* UIView.Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.Util.swift; sourceTree = "<group>"; };
 		2AD1D4641A7D147600BFB203 /* ShotsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsListViewController.swift; sourceTree = "<group>"; };
-		2AD1D4651A7D147600BFB203 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2AD1D4691A7D29B000BFB203 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		2AD1D46B1A7D29BD00BFB203 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		2AD1D46E1A7D2ABC00BFB203 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/build/Debug-iphoneos/Pods/Alamofire.framework"; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 			children = (
 				2AD1D45B1A7D146000BFB203 /* ShotsListCell.swift */,
 				2A8FDAE41A7E92E30085F4D0 /* IndicatorReusableView.swift */,
+				2A0819F31A813CE00073087F /* PageDisplayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD1D4611A7D146F00BFB203 /* UIView.Util.swift */,
+				2A0819FA1A8171500073087F /* UIViewController+Util.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,13 +250,13 @@
 		2AD1D4631A7D147600BFB203 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2AD1D4641A7D147600BFB203 /* ShotsListViewController.swift */,
 				2A8FAC981A7EFF7900113711 /* ShotsListParentViewController.swift */,
+				2AD1D4641A7D147600BFB203 /* ShotsListViewController.swift */,
 				2A8FAC911A7EF2A400113711 /* RecentShotsViewController.swift */,
 				2A8FAC941A7EFE1A00113711 /* DebutsShotsViewController.swift */,
 				2A8FAC961A7EFEBE00113711 /* PopularShotsViewController.swift */,
 				2A8FDAE11A7DFA550085F4D0 /* AdditionalLoadViewController.swift */,
-				2AD1D4651A7D147600BFB203 /* ViewController.swift */,
+				2A0819F61A815EA00073087F /* ShotsDetailViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD1D4761A7D7FD500BFB203 /* Shot.swift */,
+				2A0819F81A8169470073087F /* Player.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -453,12 +462,14 @@
 				2A72EECF1A7CE1FF00B3CFD7 /* Dribbble_client_sample.xcdatamodeld in Sources */,
 				2A8FAC971A7EFEBE00113711 /* PopularShotsViewController.swift in Sources */,
 				2A72EECC1A7CE1FF00B3CFD7 /* AppDelegate.swift in Sources */,
+				2A0819F91A8169470073087F /* Player.swift in Sources */,
 				2AD1D47D1A7D8BF700BFB203 /* Model.swift in Sources */,
+				2A0819FB1A8171500073087F /* UIViewController+Util.swift in Sources */,
 				2AD1D4591A7D144C00BFB203 /* ShotsRequest.swift in Sources */,
 				2A8FDAE21A7DFA550085F4D0 /* AdditionalLoadViewController.swift in Sources */,
-				2AD1D4671A7D147600BFB203 /* ViewController.swift in Sources */,
 				2AD1D4791A7D7FE700BFB203 /* ShotsModel.swift in Sources */,
 				2A8FAC991A7EFF7900113711 /* ShotsListParentViewController.swift in Sources */,
+				2A0819F71A815EA00073087F /* ShotsDetailViewController.swift in Sources */,
 				2AD1D4711A7D48D300BFB203 /* appRequest.swift in Sources */,
 				2A8FDAE51A7E92E30085F4D0 /* IndicatorReusableView.swift in Sources */,
 				2A8FDADB1A7DE1AD0085F4D0 /* ImageRequest.swift in Sources */,
@@ -467,6 +478,7 @@
 				2AD1D4661A7D147600BFB203 /* ShotsListViewController.swift in Sources */,
 				2AD1D45C1A7D146000BFB203 /* ShotsListCell.swift in Sources */,
 				2A8FAC951A7EFE1A00113711 /* DebutsShotsViewController.swift in Sources */,
+				2A0819F41A813CE00073087F /* PageDisplayView.swift in Sources */,
 				2AC71DA71A7DACB2001C8447 /* json.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
