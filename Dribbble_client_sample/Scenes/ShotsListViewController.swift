@@ -126,14 +126,9 @@ class ShotsListViewController: AdditionalLoadViewController, UICollectionViewDel
     /* Delegate, Datasource */
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let controller = ShotsDetailViewController.instantiateFromNib() as ShotsDetailViewController
-        
-        let nav = UINavigationController(rootViewController: controller)
-        nav.modalTransitionStyle = .CrossDissolve
-        self.presentViewController(nav, animated: true, nil)
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.05 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
-            controller.shot = self.shots[indexPath.row]
-        })
+        let view = ShotDetailView.instantiateFromNib()
+        view.shot = self.shots[indexPath.row]
+        self.view.window?.addSubview(view)
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

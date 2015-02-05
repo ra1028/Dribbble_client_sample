@@ -14,4 +14,12 @@ extension UIView {
         let range = className.rangeOfString(".")!
         return className.substringFromIndex(range.endIndex)
     }
+    
+    class func instantiateFromNib() -> Self {
+        return self.instantiateFromNibFromType()
+    }
+    
+    private class func instantiateFromNibFromType<T: UIView>() -> T {
+        return UINib(nibName: self.className(), bundle: nil).instantiateWithOwner(nil, options: nil).first! as T
+    }
 }
